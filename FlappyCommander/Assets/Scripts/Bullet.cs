@@ -22,7 +22,12 @@ public class Bullet : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-        if (other.CompareTag("Enemy"))
+        else if (other.CompareTag("ObstacleSpiky"))
+        {
+            other.GetComponent<SpikyObstacle>().TakeDamage();
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyAI>().TakeDamage();
             Destroy(gameObject);

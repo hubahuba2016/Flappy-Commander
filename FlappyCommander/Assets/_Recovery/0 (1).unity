@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 1568047893024393665, guid: f8f08a78a130674628456606f1cbedce, type: 3}
-  obstacleSpikyPrefab: {fileID: 3153776626359176188, guid: f0edf1d1aa4b6f78faf139ff134818af, type: 3}
+  obstacleSpikyPrefab: {fileID: 1487543865941808213, guid: 017de9eb8298a7a8095b1a64e4ff1e92, type: 3}
   spawnRate: 2
   heightOffset: 2
 --- !u!4 &1550579794

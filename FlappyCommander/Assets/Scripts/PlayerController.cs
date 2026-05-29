@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("ObstacleSpiky"))
         {
             Time.timeScale = 0f;
             Debug.Log("Game Over");

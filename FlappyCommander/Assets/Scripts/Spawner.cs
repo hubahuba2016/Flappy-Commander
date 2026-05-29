@@ -3,6 +3,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject obstaclePrefab;
+    public GameObject obstacleSpikyPrefab;
     public float spawnRate = 2f;
     public float heightOffset = 2f;
 
@@ -14,7 +15,7 @@ public class Spawner : MonoBehaviour
     void Spawn()
     {
         float y = Random.Range(-heightOffset, heightOffset);
-        Instantiate(obstaclePrefab, new Vector3(10f, y, 0), Quaternion.identity);
+        GameObject prefabToSpawn = Random.value > 0.5f ? obstaclePrefab : obstacleSpikyPrefab;
+        Instantiate(prefabToSpawn, new Vector3(10f, y, 0), Quaternion.identity);
     }
 }
-
